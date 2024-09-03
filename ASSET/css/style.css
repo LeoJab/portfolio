@@ -1,0 +1,377 @@
+:root {
+    --GrisClaire: rgba(46, 255, 231, 0.15);
+    --GrisFonce: #7C8B89;
+    --TextBtn: #2EFFE7;
+    --Text: #EFFFFD;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li {
+    text-decoration: none;
+    font-family: 'Farro';
+    padding: 0;
+    margin: 0;
+    cursor: default;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(28,28,28,1) 20%, rgba(26,26,26,1) 40%, rgba(24,24,24,1) 60%, rgba(22,22,22,1) 80%, rgba(20,20,20,1) 100%);
+    padding: 100px;
+}
+
+#gaucheDroite {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+#gauche, #droite {
+    width: 45%;
+}
+
+.date {
+    color: var(--GrisFonce) !important;
+    font-size: 20px !important;
+}
+
+/* --- CARD DATE CONTENU --- */
+.cardDateContenu {
+    display: flex;
+    flex-direction: row;
+    gap: 44px;
+    padding: 0 44px;
+}
+
+.cardDateContenu .contenu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cardDateContenu .contenu h4 {
+    color: var(--Text);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.cardDateContenu .contenu ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    width: 80% !important;
+}
+
+.cardDateContenu .contenu li {
+    font-size: 20px;
+    color: var(--TextBtn);
+    font-family: 'Farro';
+    background-color: var(--GrisClaire);
+    border-radius: 10px;
+    padding: 9px;
+}
+
+.cardDateContenu .contenu p {
+    font-weight: 100;
+    font-size: 20px !important;
+    color: var(--Text);
+}
+
+.cardDateContenu .icons {
+    background-color: transparent !important;
+    color: var(--TextBtn);
+    font-weight: 100;
+}
+
+.cardDateContenu .icons svg {
+    width: 34px;
+    height: 34px;
+    stroke: var(--TextBtn);
+    cursor: pointer !important;
+}
+
+.cardDateContenu .dailyUi {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.cardDateContenu .dailyUi svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer !important;
+}
+
+/* --------- GAUCHE ---------- */
+#contenu {
+    position: fixed;
+    text-align: end;
+}
+
+#gauche {
+    display: flex;
+    justify-content: end;
+}
+
+#gauche h1, #gauche h3, #gauche a {
+    color: var(--Text);
+}
+
+#gauche h1 {
+    font-size: 72px;
+    font-weight: bold;
+}
+
+#gauche h3 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+#gauche #nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 10px;
+    margin: 72px 0;
+}
+
+#gauche #nav a {
+    font-size: 28px;
+    font-weight: 200;
+    cursor: pointer !important;
+}
+
+#gauche #info {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+
+#gauche #info svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer !important;
+}
+
+#gauche #info a {
+    font-size: 30px;
+    font-weight: 100;
+    cursor: pointer !important;
+}
+
+/* --------- DROITE ---------- */
+#droite {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+/* --- A PROPOS --- */
+#aPropos {
+    margin-top: 20px;
+}
+
+#droite h2, #droite #aPropos .contenu p {
+    color: var(--Text);
+}
+
+#droite h2 {
+    font-size: 52px;
+}
+
+#droite p {
+    font-size: 24px;
+    font-weight: 100;
+}
+
+#droite #aPropos .contenu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- PARCOURS --- */
+#parcours {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* --- EXPERIENCES --- */
+#experiences {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* --- PROJETS --- */
+#projets {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* --- CHALLENGES --- */
+#challenges {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* RESPONSIVE MOBILE */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 50px 10px;
+    }
+
+    #gaucheDroite {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #gauche, #droite {
+        width: 100% !important;
+    }
+
+    .date {
+        font-size: 14px !important;
+    }
+    
+    /* --- CARD DATE CONTENU --- */
+    .cardDateContenu {
+        gap: 15px;
+        padding: 0;
+    }
+    
+    .cardDateContenu .contenu {
+        gap: 6px;
+    }
+    
+    .cardDateContenu .contenu h4 {
+        font-size: 18px;
+    }
+    
+    .cardDateContenu .contenu ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+        width: 100% !important;
+    }
+    
+    .cardDateContenu .contenu li {
+        font-size: 14px;
+        border-radius: 6px;
+        padding: 9px;
+    }
+    
+    .cardDateContenu .contenu p {
+        font-size: 14px !important;
+    }
+    
+    .cardDateContenu .icons svg {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .cardDateContenu .dailyUi svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* --------- GAUCHE ---------- */
+    #contenu {
+        position: relative;
+        text-align: center;
+    }
+
+    #gauche {
+        display: flex;
+    }
+
+    #gauche h1 {
+        font-size: 48px;
+    }
+
+    #gauche h3 {
+        font-size: 26px;
+    }
+
+    #gauche #nav {
+        gap: 5px;
+        margin: 25px 0;
+    }
+
+    #gauche #nav a {
+        font-size: 22px;
+    }
+
+    #gauche #info {
+        justify-content: center;
+    }
+
+    #gauche #info svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    #gauche #info a {
+        font-size: 22px;
+    }
+
+    /* --------- DROITE ---------- */
+    #droite {
+        gap: 30px;
+    }
+
+    /* --- A PROPOS --- */
+    #aPropos {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    #droite h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #droite p {
+        font-size: 18px;
+    }
+
+    #droite #aPropos .contenu {
+        gap: 10px;
+    }
+
+    /* --- PARCOURS --- */
+    #parcours {
+        gap: 15px;
+    }
+
+    /* --- EXPERIENCES --- */
+    #experiences {
+        gap: 15px;
+    }
+
+    /* --- PROJETS --- */
+    #projets {
+        gap: 15px;
+    }
+
+    /* --- CHALLENGES --- */
+    #challenges {
+        gap: 15px;
+    }
+}
